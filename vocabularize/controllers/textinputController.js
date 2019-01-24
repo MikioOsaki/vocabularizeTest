@@ -7,5 +7,5 @@ exports.upload_get = function (req, res, next) {
 
 // Handle POST.
 exports.upload_post = function (req, res) {
-    res.send("File upload sucessfully.");
+    res.render('index', {  title: 'Extract vocabulary from text' , status: 'File uploaded' });
 };
