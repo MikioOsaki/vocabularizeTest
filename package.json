@@ -1,0 +1,25 @@
+{
+  "name": "vocabularize",
+  "version": "1.0.0",
+  "description": "tool to extract voc from text",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikioOsaki/vocabularize.git"
+  },
+  "keywords": [
+    "vocabulary",
+    "extrection",
+    "grabber",
+    "text"
+  ],
+  "author": "Mikio Osaki",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/MikioOsaki/vocabularize/issues"
+  },
+  "homepage": "https://github.com/MikioOsaki/vocabularize#readme"
+}
