@@ -3,22 +3,6 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-
-    form(method='POST' action='' enctype='multipart/form-data')
-    div.form-group
-      
-      input(type='file', name='fileupload')
-      button.btn.btn-primary(type='submit' name='uploadfile', value='Upload File') Upload File
-
-      textarea(id="theTextarea", name='theTextarea', required='true' )
-        | enter 
-        | text
-        | here
-
-    button.btn.btn-primary(type='submit' name='extractvoc', value='Extreact Voc') Extract Voc
-
-    
-  if errors 
-    ul
-      for error in errors
-        li!= error.msg
+  form(method='post', enctype='multipart/form-data')
+    input(type='file', name='imageupload')
+    input(type='submit', name='uploadimage', value='Upload Image')
