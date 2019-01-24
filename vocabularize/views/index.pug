@@ -2,9 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Vocabularize extracts vocab from your textfile
   form(method='post', enctype='multipart/form-data')
-    input(type='file', name='file-to-upload')
-    input(type='submit', name='uploadFile', value='Upload File')
+    input(type='file', name='file-to-upload', value='Pick textfile')
+    input(type='submit', name='uploadFile', value='Get Vocab')
 
-  p #{status}
+  if output
+    textarea= output 
+  else
+    textarea= "hello output" 

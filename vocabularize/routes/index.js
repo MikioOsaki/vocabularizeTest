@@ -4,18 +4,12 @@ var router = express.Router();
 var textinput_controller = require('../controllers/textinputController');
 
 
-//multer object creation
-const multer = require('multer')
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public/uploads/')
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname)
-  }
-})
+var multer = require('multer');
+var storage = multer.memoryStorage();
+    var upload = multer({ 
+    storage: storage
+});
 
-var upload = multer({ storage: storage })
 
 // GET request for creating textinput. NOTE This must come before route for id (i.e. display textinput).
 router.get('/', textinput_controller.upload_get);
